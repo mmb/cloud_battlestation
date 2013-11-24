@@ -1,0 +1,13 @@
+{
+  "sources": {
+    "ddclient": {
+      "locked_version": "1.1.0",
+      "git": "https://github.com/ruanwz/ruanwz-cookbooks.git",
+      "ref": "607238298e1bff7b658c05f7028da45da4ec65d5",
+      "rel": "ddclient"
+    },
+    "cloud_battlestation": {
+      "path": "./site-cookbooks/cloud_battlestation"
+    }
+  }
+}

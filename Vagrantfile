@@ -26,4 +26,5 @@ Vagrant.configure('2') do |config|
     chef.add_role 'cloud_battlestation'
   end
 
+  config.vm.synced_folder 'synced/', '/home/ubuntu/synced'
 end

@@ -1,0 +1,6 @@
+Cloud Battlestation
+
+https://github.com/mmb/cloud_battlestation
+
+To attach to tmux: tmux attach -d
+

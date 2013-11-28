@@ -8,6 +8,9 @@
     },
     "cloud_battlestation": {
       "path": "./site-cookbooks/cloud_battlestation"
+    },
+    "openssl": {
+      "locked_version": "1.1.0"
     }
   }
 }

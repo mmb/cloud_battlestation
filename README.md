@@ -40,9 +40,9 @@ vagrant up --provider=aws
 
 # Amazon security group configuration
 
-Allow inbound:
+Allow inbound ports:
 
-* port 22 (ssh)
+* 22 (ssh)
 * 51413 (BitTorrent, optional)
 * 9091 (Transmission web interface, optional)
 

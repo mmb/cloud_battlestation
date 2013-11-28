@@ -1,10 +1,13 @@
-Create an instance on Amazon that hosts a persistent tmux session
-running the WeeChat IRC client.
+Create a cloud battlestation on Amazon with:
 
-Use WeeChat for IRC and IM (using bitlbee). Also run a local IRC server
-with personal bots for news and other custom functions (coming soon).
+* DynDNS hostname
+* tmux
+* WeeChat IRC client
+* BitlBee for instant messaging
+* Transmission BitTorrent daemon and curses client
+* local IRC server with Hubot (coming soon)
 
-Installation:
+# Installation
 
 ```
 gem install berkshelf
@@ -26,7 +29,7 @@ export AWS_KEYPAIR_NAME=
 # The private key downloaded from Amazon when the key pair was created.
 export SSH_PRIVATE_KEY_PATH=
 
-# Use an AWS security group that has inbound port 22 open.
+# The AWS security group to use (open port 22 required).
 export AWS_SECURITY_GROUPS=
 
 Put your DynDNS login, password and hostname in
@@ -35,7 +38,15 @@ roles/cloud_battlestation.rb to give the instance a permanent hostname.
 vagrant up --provider=aws
 ```
 
-Logging in:
+# Amazon security group configuration
+
+Allow inbound:
+
+* port 22 (ssh)
+* 51413 (BitTorrent, optional)
+* 9091 (Transmission web interface, optional)
+
+# Logging in
 
 ```
 ssh -i <path to your private key> ubuntu@your_dyndns_hostname

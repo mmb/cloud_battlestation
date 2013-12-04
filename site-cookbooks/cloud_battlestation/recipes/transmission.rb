@@ -33,7 +33,7 @@ template '/home/ubuntu/.netrc' do
 end
 
 git '/opt/transmission-remote-cli' do
-  repository 'git://github.com/fagga/transmission-remote-cli.git'
+  repository 'https://github.com/fagga/transmission-remote-cli.git'
   action :sync
 end
 

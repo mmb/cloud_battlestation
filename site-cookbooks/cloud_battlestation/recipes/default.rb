@@ -1,5 +1,7 @@
+include_recipe 'apt'
 include_recipe 'cloud_battlestation::bitlbee'
 include_recipe 'cloud_battlestation::motd'
 include_recipe 'cloud_battlestation::packages'
 include_recipe 'cloud_battlestation::tmux'
 include_recipe 'cloud_battlestation::transmission'
+include_recipe 'cloud_battlestation::weechat'

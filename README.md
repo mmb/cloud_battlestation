@@ -5,7 +5,6 @@ Create a cloud battlestation on Amazon with:
 * WeeChat IRC client
 * BitlBee for instant messaging
 * Transmission BitTorrent daemon and curses client
-* local IRC server with Hubot (coming soon)
 
 # Installation
 

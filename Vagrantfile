@@ -10,10 +10,13 @@ Vagrant.configure('2') do |config|
     aws.access_key_id = env.fetch('AWS_ACCESS_KEY_ID')
     aws.secret_access_key = env.fetch('AWS_SECRET_ACCESS_KEY')
     aws.keypair_name = env.fetch('AWS_KEYPAIR_NAME')
-    aws.security_groups = env.fetch('AWS_SECURITY_GROUPS').split(',')
+    aws.security_groups = env.fetch('AWS_VPC_SECURITY_GROUPS').split(',')
+    aws.subnet_id = env.fetch('AWS_VPC_SUBNET')
+    aws.associate_public_ip = true
 
-    aws.instance_type = 't1.micro'
-    aws.ami = 'ami-a73264ce'
+    aws.instance_type = 't2.micro'
+    # Ubuntu Server 14.04 LTS (HVM), SSD Volume Type
+    aws.ami = 'ami-0070c468'
 
     aws.tags = { 'Name' => 'Cloud Battlestation' }
 

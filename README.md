@@ -8,8 +8,9 @@ Create a cloud battlestation on Amazon with:
 
 # Installation
 
+Install Berkshelf according to the instructions at http://berkshelf.com/.
+
 ```
-gem install berkshelf
 berks install
 
 Install vagrant
@@ -25,13 +26,18 @@ export AWS_ACCESS_KEY_ID=
 export AWS_SECRET_ACCESS_KEY=
 export AWS_KEYPAIR_NAME=
 
+# The subnet id of a subnet in a VPC.
+export AWS_VPC_SUBNET=
+
 # The private key downloaded from Amazon when the key pair was created.
 export SSH_PRIVATE_KEY_PATH=
 
-# The AWS security group to use (open port 22 required).
-export AWS_SECURITY_GROUPS=
+# Comma-separated list of AWS security group ids. These must exist in the
+# same VPC as AWS_VPC_SUBNET. Port 22 must be open.
+export AWS_VPC_SECURITY_GROUPS=
 
 vagrant up --provider=aws
+vagrant ssh
 ```
 
 # Amazon security group configuration
@@ -41,9 +47,3 @@ Allow inbound ports:
 * 22 (ssh)
 * 51413 (BitTorrent, optional)
 * 9091 (Transmission web interface, optional)
-
-# Logging in
-
-```
-vagrant ssh
-```

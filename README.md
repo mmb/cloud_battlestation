@@ -1,6 +1,5 @@
 Create a cloud battlestation on Amazon with:
 
-* DynDNS hostname
 * tmux
 * WeeChat IRC client
 * BitlBee for instant messaging
@@ -32,9 +31,6 @@ export SSH_PRIVATE_KEY_PATH=
 # The AWS security group to use (open port 22 required).
 export AWS_SECURITY_GROUPS=
 
-Put your DynDNS login, password and hostname in
-roles/cloud_battlestation.rb to give the instance a permanent hostname.
-
 vagrant up --provider=aws
 ```
 
@@ -49,5 +45,5 @@ Allow inbound ports:
 # Logging in
 
 ```
-ssh -i <path to your private key> ubuntu@your_dyndns_hostname
+vagrant ssh
 ```

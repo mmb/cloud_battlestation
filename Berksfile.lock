@@ -1,28 +1,21 @@
-{
-  "sources": {
-    "ddclient": {
-      "locked_version": "1.1.0",
-      "git": "https://github.com/ruanwz/ruanwz-cookbooks.git",
-      "ref": "607238298e1bff7b658c05f7028da45da4ec65d5",
-      "rel": "ddclient"
-    },
-    "cloud_battlestation": {
-      "path": "./site-cookbooks/cloud_battlestation"
-    },
-    "openssl": {
-      "locked_version": "1.1.0"
-    },
-    "apt": {
-      "locked_version": "2.3.0"
-    },
-    "python": {
-      "locked_version": "1.4.4"
-    },
-    "build-essential": {
-      "locked_version": "1.4.2"
-    },
-    "yum": {
-      "locked_version": "2.4.4"
-    }
-  }
-}
+DEPENDENCIES
+  cloud_battlestation
+    path: site-cookbooks/cloud_battlestation
+  openssl
+
+GRAPH
+  apt (2.6.0)
+  build-essential (2.0.6)
+  chef-sugar (2.3.0)
+  cloud_battlestation (0.1.0)
+    apt (>= 0.0.0)
+    openssl (>= 0.0.0)
+    python (>= 0.0.0)
+  openssl (2.0.0)
+    chef-sugar (>= 0.0.0)
+  python (1.4.6)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  yum (3.3.2)
+  yum-epel (0.5.1)
+    yum (~> 3.0)
